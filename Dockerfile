@@ -18,4 +18,4 @@ ADD . /src/app
 VOLUME /var/log
 VOLUME /tmp/app
 
-CMD ["python","/src/app/rm_logs.py"]
+CMD ["python","/src/app/example_log_parser.py"]
