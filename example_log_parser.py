@@ -37,8 +37,6 @@ def prepare_data(data):
     data['service'][data['upstream_addr'] == '127.0.0.1:4092'] = 'screenshot'
     data['service'][data['upstream_addr'] == '127.0.0.1:9000'] = 'frontend'
 
-    data['backend_module'] = data['request'].apply(guess_backend_module)
-
     data['request_time_xx'] = '-'
     data['request_time_xx'][data['request_time'].between(0, 0.5)] = '0-500ms'
     data['request_time_xx'][data['request_time'].between(0.5, 1)] = '500ms-1s'
